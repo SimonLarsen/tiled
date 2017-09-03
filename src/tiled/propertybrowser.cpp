@@ -117,8 +117,8 @@ PropertyBrowser::PropertyBrowser(QWidget *parent)
     mFlippingFlagNames.append(tr("Horizontal"));
     mFlippingFlagNames.append(tr("Vertical"));
 
-    mDrawOrderNames.append(tr("Top Down"));
     mDrawOrderNames.append(tr("Manual"));
+    mDrawOrderNames.append(tr("Top Down"));
 
     connect(mVariantManager, SIGNAL(valueChanged(QtProperty*,QVariant)),
             SLOT(valueChanged(QtProperty*,QVariant)));
