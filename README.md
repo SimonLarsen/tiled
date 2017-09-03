@@ -1,5 +1,8 @@
 Tiled Map Editor - http://www.mapeditor.org/
 
+> This is a fork of Tiled in which object drawing order can be changed between all objects - not only overlapping ones.
+> This fork exists solely because I need this functionality for making [Rakshasa](https://github.com/SimonLarsen/rakshasa).
+
 About Tiled
 -------------------------------------------------------------------------------
 
