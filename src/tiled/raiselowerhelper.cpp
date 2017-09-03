@@ -213,20 +213,7 @@ bool RaiseLowerHelper::initContext()
     if (mObjectGroup->drawOrder() != ObjectGroup::IndexOrder)
         return false;
 
-    QPainterPath shape;
-
-    for (const MapObjectItem *item : selectedItems) {
-        if (item->mapObject()->objectGroup() != mObjectGroup)
-            return false;
-
-        shape |= item->mapToScene(item->shape());
-    }
-
-    // The list of related items are all items from the same object group
-    // that share space with the selected items.
-    const QList<QGraphicsItem*> items = mMapScene->items(shape,
-                                                         Qt::IntersectsItemShape,
-                                                         Qt::AscendingOrder);
+    const QList<QGraphicsItem*> items = mMapScene->items(Qt::AscendingOrder);
 
     for (QGraphicsItem *item : items) {
         if (MapObjectItem *mapObjectItem = dynamic_cast<MapObjectItem*>(item)) {
